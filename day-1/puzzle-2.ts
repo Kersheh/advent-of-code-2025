@@ -40,10 +40,8 @@ const executeAllTurnsAndCountZeroCrossings = (turns: Array<Turn>) => {
 
 // example puzzle 2
 const inputExample = readInput<TurnTemplateLiteral>(import.meta.url, puzzleExampleInput).map(parseTurn)
-// console.debug(inputExample)
 logExampleSolution(executeAllTurnsAndCountZeroCrossings(inputExample), 6)
 
 // puzzle 2
 const input = readInput<TurnTemplateLiteral>(import.meta.url, puzzleInput).map(parseTurn)
-// console.debug(input)
 logSolution(executeAllTurnsAndCountZeroCrossings(input))

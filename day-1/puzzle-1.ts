@@ -24,10 +24,8 @@ const executeAllTurnsAndCountZeroPositions = (turns: Array<Turn>) => {
 
 // example
 const inputExample = readInput<TurnTemplateLiteral>(import.meta.url, puzzleExampleInput).map(parseTurn)
-// console.debug(inputExample)
 logExampleSolution(executeAllTurnsAndCountZeroPositions(inputExample), 3)
 
 // puzzle
 const input = readInput<TurnTemplateLiteral>(import.meta.url, puzzleInput).map(parseTurn)
-// console.debug(input)
 logSolution(executeAllTurnsAndCountZeroPositions(input))

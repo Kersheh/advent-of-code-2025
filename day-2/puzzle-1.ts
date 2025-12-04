@@ -25,10 +25,8 @@ const summateAllInvalidIdsByMirroredStrings = (idRanges: Array<IdRange>) => {
 
 // example
 const inputExample = readInput<IdRangeTemplateLiteral>(import.meta.url, puzzleExampleInput, ',').map(parseIdRange)
-// console.debug(inputExample)
 logExampleSolution(summateAllInvalidIdsByMirroredStrings(inputExample), 1227775554)
 
 // puzzle
 const input = readInput<IdRangeTemplateLiteral>(import.meta.url, puzzleInput, ',').map(parseIdRange)
-// console.debug(input)
 logSolution(summateAllInvalidIdsByMirroredStrings(input))

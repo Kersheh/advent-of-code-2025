@@ -26,10 +26,8 @@ const summateAllInvalidIdsByExhaustiveRepeatingSubStrings = (idRanges: Array<IdR
 
 // example
 const inputExample = readInput<IdRangeTemplateLiteral>(import.meta.url, puzzleExampleInput, ',').map(parseIdRange)
-// console.debug(inputExample)
 logExampleSolution(summateAllInvalidIdsByExhaustiveRepeatingSubStrings(inputExample), 4174379265)
 
 // puzzle
 const input = readInput<IdRangeTemplateLiteral>(import.meta.url, puzzleInput, ',').map(parseIdRange)
-// console.debug(input)
 logSolution(summateAllInvalidIdsByExhaustiveRepeatingSubStrings(input))
