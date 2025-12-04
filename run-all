@@ -1,0 +1,19 @@
+#!/bin/bash
+
+for day in {1..12}; do
+  folder="day-$day"
+  
+  if [ -d "$folder" ]; then
+    echo "=== Day $day ==="
+    
+    for puzzle in 1 2; do
+      file="$folder/puzzle-$puzzle.ts"
+      if [ -f "$file" ]; then
+        echo "|-- Puzzle Solution $puzzle"
+        npx tsx --import ./shim.ts ./"$file"
+      fi
+    done 
+    
+    echo ""
+  fi
+done

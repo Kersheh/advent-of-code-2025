@@ -1,0 +1,18 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+  echo "Usage: ./run.sh <day-number>"
+  echo "Example: ./run.sh 1"
+  exit 1
+fi
+
+day=$1
+folder="day-$day"
+
+if [ ! -d "$folder" ]; then
+  echo "Error: $folder does not exist"
+  exit 1
+fi
+
+echo "Watching $folder for changes..."
+npx tsx watch "$folder"/index.ts

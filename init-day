@@ -1,0 +1,43 @@
+#!/bin/bash
+
+if [ -z "$1" ]; then
+  echo "Usage: ./init-day <day-number>"
+  exit 1
+fi
+
+DAY=$1
+DIR="day-$DAY"
+
+if [ -d "$DIR" ]; then
+  echo "Error: $DIR already exists"
+  exit 1
+fi
+
+mkdir -p "$DIR/input"
+
+cat > "$DIR/day-$DAY.txt" << 'EOF'
+EOF
+
+cat > "$DIR/index.ts" << 'EOF'
+// import './puzzle-1';
+// import './puzzle-2';
+EOF
+
+cat > "$DIR/utils.ts" << 'EOF'
+// @todo
+EOF
+
+cat > "$DIR/puzzle-1.ts" << 'EOF'
+// @todo
+EOF
+
+cat > "$DIR/puzzle-2.ts" << 'EOF'
+// @todo
+EOF
+
+touch "$DIR/input/puzzle-1-example.txt"
+touch "$DIR/input/puzzle-1.txt"
+touch "$DIR/input/puzzle-2-example.txt"
+touch "$DIR/input/puzzle-2.txt"
+
+echo "Created $DIR with boilerplate files"
